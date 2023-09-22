@@ -60,6 +60,7 @@ class Cart extends StatelessWidget {
                             Text(
                               "Cart is Empty",
                               style: TextStyle(
+                                fontStyle: FontStyle.italic,
                                   fontSize: 40.sp,
                                   color: const Color(0xffF8774A),
                                   fontWeight: FontWeight.w600),

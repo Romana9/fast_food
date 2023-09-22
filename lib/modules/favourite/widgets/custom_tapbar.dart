@@ -1,12 +1,12 @@
-import 'package:fast_food/helper/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/cubit/app_cubit.dart';
+import '../../../helper/colors.dart';
 
-class AuthAppBar extends StatelessWidget {
-  const AuthAppBar({
+class CustomTapBar extends StatelessWidget {
+  const CustomTapBar({
     super.key,
   });
 
@@ -16,7 +16,7 @@ class AuthAppBar extends StatelessWidget {
       listener: (context, state) {},
       builder: (context, state) {
         return Container(
-          height: 345.h,
+          height: 160.h,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -29,7 +29,7 @@ class AuthAppBar extends StatelessWidget {
             children: [
               Image.asset(
                 "assets/img/logo.png",
-                height: 250.h,
+                height: 100.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -37,40 +37,46 @@ class AuthAppBar extends StatelessWidget {
                   Material(
                     color: Colors.transparent,
                     shape: Border(
-                        bottom: BorderSide(
-                      color: AppCubit.get(context).logButton == 0 ||
-                              AppCubit.get(context).logButton == 2
-                          ? Appcolors.primary
-                          : Colors.transparent,
-                      width: 3.w,
-                    )),
+                      bottom: BorderSide(
+                        color: AppCubit.get(context).likedButton == 0
+                            ? Appcolors.primary
+                            : Colors.transparent,
+                        width: 3.w,
+                      ),
+                    ),
                     child: TextButton(
                         onPressed: () {
-                          AppCubit.get(context).logButtonIndex(0);
+                          AppCubit.get(context).likedButtonFun(0);
                         },
                         child: Text(
-                          'Login',
-                          style:
-                              TextStyle(color: Colors.black, fontSize: 20.sp),
+                          'Liked',
+                          style: TextStyle(
+                              color: AppCubit.get(context).likedButton == 0
+                                  ? Appcolors.primary
+                                  : Colors.black,
+                              fontSize: 24.sp),
                         )),
                   ),
                   Material(
                     color: Colors.transparent,
                     shape: Border(
                         bottom: BorderSide(
-                      color: AppCubit.get(context).logButton == 1
+                      color: AppCubit.get(context).likedButton == 1
                           ? Appcolors.primary
                           : Colors.transparent,
                       width: 3.w,
                     )),
                     child: TextButton(
                         onPressed: () {
-                          AppCubit.get(context).logButtonIndex(1);
+                          AppCubit.get(context).likedButtonFun(1);
                         },
                         child: Text(
-                          'Sign-up',
-                          style:
-                              TextStyle(color: Colors.black, fontSize: 20.sp),
+                          'Saved',
+                          style: TextStyle(
+                              color: AppCubit.get(context).likedButton == 1
+                                  ? Appcolors.primary
+                                  : Colors.black,
+                              fontSize: 24.sp),
                         )),
                   ),
                 ],

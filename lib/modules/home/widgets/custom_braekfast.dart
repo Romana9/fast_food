@@ -13,20 +13,16 @@ class CustomBreakfast extends StatelessWidget {
         SizedBox(
           height: 370.h,
           child: Padding(
-            padding:
-                EdgeInsets.symmetric(horizontal: 15.w),
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
             child: Container(
               padding: EdgeInsets.all(20.h),
               decoration: BoxDecoration(
-                  color: const Color.fromARGB(
-                      26, 248, 137, 34),
-                  borderRadius:
-                      BorderRadius.circular(30.r)),
+                  color: const Color.fromARGB(26, 248, 137, 34),
+                  borderRadius: BorderRadius.circular(30.r)),
               child: Column(
                 children: [
                   Column(
-                    crossAxisAlignment:
-                        CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
@@ -34,17 +30,14 @@ class CustomBreakfast extends StatelessWidget {
                             "Looking for ",
                             style: TextStyle(
                                 fontSize: 20.sp,
-                                color: const Color(
-                                    0xffF88922)),
+                                color: const Color(0xffF88922)),
                           ),
                           Text(
                             "Breakfast?",
                             style: TextStyle(
                                 fontSize: 20.sp,
-                                color: const Color(
-                                    0xffF88922),
-                                fontWeight:
-                                    FontWeight.bold),
+                                color: const Color(0xffF88922),
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -52,9 +45,7 @@ class CustomBreakfast extends StatelessWidget {
                       Text(
                         "Here’s what you might like to\ntaste",
                         style: TextStyle(
-                            fontSize: 14.64.sp,
-                            color:
-                                const Color(0xffA6978A)),
+                            fontSize: 14.64.sp, color: const Color(0xffA6978A)),
                       ),
                     ],
                   ),
@@ -73,11 +64,9 @@ class CustomBreakfast extends StatelessWidget {
                 clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius:
-                        BorderRadius.circular(20.r)),
+                    borderRadius: BorderRadius.circular(20.r)),
                 child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       height: 133.h,
@@ -85,59 +74,47 @@ class CustomBreakfast extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage(
-                              "assets/img/braekfast1.png"),
+                          image: AssetImage("assets/img/braekfast1.png"),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 15.w),
+                      padding: EdgeInsets.symmetric(horizontal: 15.w),
                       child: Column(
-                        crossAxisAlignment:
-                            CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(height: 20.h),
                           Text(
                             "Cappuccino",
                             style: TextStyle(
                                 fontSize: 17.3.sp,
-                                color: const Color(
-                                    0xff333333),
-                                fontWeight:
-                                    FontWeight.w600),
+                                color: const Color(0xff333333),
+                                fontWeight: FontWeight.w600),
                           ),
                           Text(
                             "Suhani Restaurant",
                             style: TextStyle(
                                 fontSize: 14.sp,
-                                color: const Color(
-                                    0xff7C7C7C),
-                                fontWeight:
-                                    FontWeight.w600),
+                                color: const Color(0xff7C7C7C),
+                                fontWeight: FontWeight.w600),
                           ),
                           SizedBox(height: 30.h),
                           Row(
-                            crossAxisAlignment:
-                                CrossAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Text(
                                 "250 \$",
                                 style: TextStyle(
                                     fontSize: 12.sp,
-                                    fontWeight:
-                                        FontWeight.w600,
-                                    decoration:
-                                        TextDecoration
-                                            .lineThrough),
+                                    fontWeight: FontWeight.w600,
+                                    decoration: TextDecoration.lineThrough),
                               ),
                               SizedBox(width: 7.w),
                               Text(
                                 "200 \$",
                                 style: TextStyle(
                                     fontSize: 18.63.sp,
-                                    color: const Color(
-                                        0xffF88922)),
+                                    color: const Color(0xffF88922)),
                               ),
                             ],
                           ),
@@ -156,11 +133,9 @@ class CustomBreakfast extends StatelessWidget {
                     clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius:
-                            BorderRadius.circular(20.r)),
+                        borderRadius: BorderRadius.circular(20.r)),
                     child: Column(
-                      crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           height: 133.h,
@@ -168,44 +143,36 @@ class CustomBreakfast extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.fill,
-                              image: AssetImage(
-                                  "assets/img/braekfast2.png"),
+                              image: AssetImage("assets/img/braekfast2.png"),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15.w),
+                          padding: EdgeInsets.symmetric(horizontal: 15.w),
                           child: Column(
-                            crossAxisAlignment:
-                                CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(height: 20.h),
                               Text(
                                 "Egg and cheese sandwich",
                                 style: TextStyle(
                                     fontSize: 17.3.sp,
-                                    color: const Color(
-                                        0xff333333),
-                                    fontWeight:
-                                        FontWeight.w600),
+                                    color: const Color(0xff333333),
+                                    fontWeight: FontWeight.w600),
                               ),
                               Text(
                                 "Mehfil’s Place",
                                 style: TextStyle(
                                     fontSize: 14.sp,
-                                    color: const Color(
-                                        0xff7C7C7C),
-                                    fontWeight:
-                                        FontWeight.w600),
+                                    color: const Color(0xff7C7C7C),
+                                    fontWeight: FontWeight.w600),
                               ),
                               SizedBox(height: 10.h),
                               Text(
                                 "200 \$",
                                 style: TextStyle(
                                     fontSize: 18.63.sp,
-                                    color: const Color(
-                                        0xffF88922)),
+                                    color: const Color(0xffF88922)),
                               ),
                             ],
                           ),
@@ -216,10 +183,8 @@ class CustomBreakfast extends StatelessWidget {
                   Positioned(
                     top: 5.h,
                     left: 0,
-                    child: Image.asset(
-                        "assets/img/offer.png",
-                        height: 40.h,
-                        width: 80.w),
+                    child: Image.asset("assets/img/offer.png",
+                        height: 40.h, width: 80.w),
                   ),
                   Positioned(
                     top: 120.h,
@@ -229,12 +194,10 @@ class CustomBreakfast extends StatelessWidget {
                       width: 102.45.w,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius:
-                            BorderRadius.circular(
-                                14.64.r),
+                        borderRadius: BorderRadius.circular(14.64.r),
                         border: Border.all(
-                            color:
-                                const Color(0xff707070)),
+                          color: const Color(0xff707070),
+                        ),
                       ),
                       child: Center(
                         child: Text(
@@ -242,8 +205,7 @@ class CustomBreakfast extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 10.64.sp,
                               fontWeight: FontWeight.bold,
-                              color: const Color(
-                                  0xff707070)),
+                              color: const Color(0xff707070)),
                         ),
                       ),
                     ),

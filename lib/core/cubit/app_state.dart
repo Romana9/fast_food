@@ -12,3 +12,7 @@ final class IsSecureIcon extends AppState {}
 final class IsSearching extends AppState {}
 
 final class RemoveCartList extends AppState {}
+
+final class LikedButton extends AppState {}
+
+final class Saved extends AppState {}

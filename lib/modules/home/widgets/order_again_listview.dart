@@ -19,20 +19,29 @@ class OrderAgainListView extends StatelessWidget {
       },
     ];
     return SizedBox(
-      height: 140.h,
+      height: 145.h,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: orderAgain.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.only(right: 20.w),
+            padding: EdgeInsets.only(right: 10.w, top: 5.h, left: 5.w, bottom: 5.h),
             child: Container(
               height: 138.2.h,
               width: 294.4.w,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.r),
-                  border: Border.all(color: const Color(0xffC8C8C8))),
+                borderRadius: BorderRadius.circular(10.r),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade400,
+                    blurRadius: 5.r,
+                    spreadRadius: 1.r,
+                    offset: const Offset(0, 0),
+                  ),
+                ],
+              ),
               child: Padding(
                 padding: EdgeInsets.all(15.h),
                 child: Row(

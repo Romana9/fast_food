@@ -28,7 +28,7 @@ class FastFood extends StatelessWidget {
             child: const MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Fast Food',
-              home: HomeLayout(),
+              home: SplashView(),
             ),
           );
         });

@@ -19,8 +19,7 @@ class ApplyButton extends StatelessWidget {
         children: [
           Text(
             "100 \$",
-            style:
-                TextStyle(fontSize: 21.sp, color: Colors.white),
+            style: TextStyle(fontSize: 21.sp, color: Colors.white),
           ),
           Container(
             height: 34.h,
@@ -31,35 +30,30 @@ class ApplyButton extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 7.w),
               child: Row(
-                mainAxisAlignment:
-                    MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
                     onTap: () {},
-                    child: Icon(Icons.remove,
-                        color: Colors.white, size: 23.h),
+                    child: Icon(Icons.remove, color: Colors.white, size: 23.h),
                   ),
                   Text(
                     "1",
-                    style: TextStyle(
-                        fontSize: 21.sp, color: Colors.white),
+                    style: TextStyle(fontSize: 21.sp, color: Colors.white),
                   ),
                   InkWell(
                     onTap: () {},
-                    child: Icon(Icons.add,
-                        color: Colors.white, size: 23.h),
+                    child: Icon(Icons.add, color: Colors.white, size: 23.h),
                   ),
                 ],
               ),
             ),
           ),
           Container(
-            height: 32.h,
-            width: 32.w,
+            height: 35.h,
+            width: 35.w,
             decoration: const BoxDecoration(
                 color: Colors.white, shape: BoxShape.circle),
-            child: Center(
-                child: Icon(Icons.shopping_basket, size: 28.h)),
+            child: Center(child: Icon(Icons.shopping_basket, size: 28.h)),
           )
         ],
       ),

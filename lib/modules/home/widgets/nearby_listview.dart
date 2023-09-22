@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:like_button/like_button.dart';
 
 class CustomNearbyListView extends StatelessWidget {
   const CustomNearbyListView({super.key});
@@ -47,7 +48,8 @@ class CustomNearbyListView extends StatelessWidget {
         itemCount: nearby.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.only(right: 10.w),
+            padding:
+                EdgeInsets.only(right: 10.w, top: 5.h, left: 5.w, bottom: 5.h),
             child: Stack(
               children: [
                 Container(
@@ -55,8 +57,17 @@ class CustomNearbyListView extends StatelessWidget {
                   width: 196.92.w,
                   clipBehavior: Clip.antiAlias,
                   decoration: BoxDecoration(
-                      border: Border.all(color: const Color(0xffC8C8C8)),
-                      borderRadius: BorderRadius.circular(20.r)),
+                    borderRadius: BorderRadius.circular(20.r),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade400,
+                        blurRadius: 5.r,
+                        spreadRadius: 1.r,
+                        offset: const Offset(0, 0),
+                      ),
+                    ],
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -126,8 +137,22 @@ class CustomNearbyListView extends StatelessWidget {
                                             fontSize: 18.63.sp,
                                             color: const Color(0xffF88922)),
                                       ),
-                                Icon(CupertinoIcons.bookmark_solid,
-                                    color: const Color(0xffC8C8C8), size: 25.h)
+                                LikeButton(
+                                  circleColor: const CircleColor(
+                                      start: Color(0xff4FA987),
+                                      end: Color(0xff4FA987)),
+                                  bubblesColor: const BubblesColor(
+                                    dotPrimaryColor: Color(0xff4FA987),
+                                    dotSecondaryColor: Color(0xff4FA987),
+                                  ),
+                                  likeBuilder: (bool isSaved) {
+                                    return Icon(CupertinoIcons.bookmark_solid,
+                                        color: isSaved
+                                            ? const Color(0xff4FA987)
+                                            : const Color(0xffC8C8C8),
+                                        size: 25.h);
+                                  },
+                                ),
                               ],
                             ),
                           ],

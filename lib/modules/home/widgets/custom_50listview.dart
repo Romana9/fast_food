@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:like_button/like_button.dart';
 
 class Custom50Listview extends StatelessWidget {
   const Custom50Listview({
@@ -123,8 +124,22 @@ class Custom50Listview extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                Icon(CupertinoIcons.bookmark_solid,
-                                    color: const Color(0xffC8C8C8), size: 25.h)
+                                LikeButton(
+                                  circleColor: const CircleColor(
+                                      start: Color(0xff4FA987),
+                                      end: Color(0xff4FA987)),
+                                  bubblesColor: const BubblesColor(
+                                    dotPrimaryColor: Color(0xff4FA987),
+                                    dotSecondaryColor: Color(0xff4FA987),
+                                  ),
+                                  likeBuilder: (bool isSaved) {
+                                    return Icon(CupertinoIcons.bookmark_solid,
+                                        color: isSaved
+                                            ? const Color(0xff4FA987)
+                                            : const Color(0xffC8C8C8),
+                                        size: 25.h);
+                                  },
+                                ),
                               ],
                             ),
                           ],

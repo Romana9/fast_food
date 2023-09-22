@@ -166,8 +166,8 @@ class Order extends StatelessWidget {
             top: 288.h,
             right: 19.w,
             child: Container(
-              height: 50.h,
-              width: 50.w,
+              height: 55.h,
+              width: 55.w,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
@@ -194,7 +194,7 @@ class Order extends StatelessWidget {
                   return Icon(
                     Icons.favorite,
                     color: isLiked ? const Color(0xffFD6B4B) : Colors.grey,
-                    size: 30.h,
+                    size: 35.h,
                   );
                 },
               ),

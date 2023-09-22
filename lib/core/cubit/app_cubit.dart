@@ -16,6 +16,13 @@ class AppCubit extends Cubit<AppState> {
     emit(LogButtonIndex());
   }
 
+  int likedButton = 0;
+
+  likedButtonFun(index) {
+    likedButton = index;
+    emit(LikedButton());
+  }
+
   bool isSecure = true;
 
   isSecureIcon(isSecuree) {
@@ -70,5 +77,15 @@ class AppCubit extends Cubit<AppState> {
   removeCartList() {
     cartList.removeRange(0, cartList.length);
     emit(RemoveCartList());
+  }
+
+  List savedItems = [];
+
+  bool isSaved = false;
+
+  isSavedFun(index, bool isSavedd) {
+    isSaved = isSavedd;
+    savedItems.add(index);
+    emit(Saved());
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
+import '../../favourite/favourie.dart';
 import '../../search/search.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -54,10 +55,17 @@ class CustomAppBar extends StatelessWidget {
                   ],
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    PersistentNavBarNavigator.pushNewScreen(
+                      context,
+                      screen: const Favourite(),
+                      withNavBar: false,
+                      pageTransitionAnimation: PageTransitionAnimation.fade,
+                    );
+                  },
                   child: Icon(
                     Icons.favorite_outlined,
-                    color: const Color.fromARGB(183, 79, 169, 135),
+                    color: const Color(0xff4FA987),
                     size: 35.h,
                   ),
                 ),
@@ -115,7 +123,7 @@ class CustomAppBar extends StatelessWidget {
                       border: Border.all(color: const Color(0xffC8C8C8))),
                   child: const Icon(
                     Icons.filter_list_alt,
-                    color: Colors.green,
+                    color: Color(0xff4FA987),
                   )),
             ],
           ),

@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import '../your_orders/your_orders.dart';
 import 'widgets/all_container.dart';
 import 'widgets/custom_50listview.dart';
 import 'widgets/custom_appbar.dart';
@@ -121,7 +123,15 @@ class Home extends StatelessWidget {
                                   ],
                                 ),
                                 AllContainer(
-                                  onTap: () {},
+                                  onTap: () {
+                                    PersistentNavBarNavigator.pushNewScreen(
+                                      context,
+                                      screen: const YourOrders(),
+                                      withNavBar: false,
+                                      pageTransitionAnimation:
+                                          PageTransitionAnimation.fade,
+                                    );
+                                  },
                                 ),
                               ],
                             ),

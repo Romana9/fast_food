@@ -10,7 +10,7 @@ class AllContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         height: 40.h,
         width: 57.w,
