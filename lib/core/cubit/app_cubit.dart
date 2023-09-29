@@ -83,9 +83,13 @@ class AppCubit extends Cubit<AppState> {
 
   bool isSaved = false;
 
-  isSavedFun(index, bool isSavedd) {
-    isSaved = isSavedd;
-    savedItems.add(index);
+  isSavedFun(Map item) {
+    savedItems.add(item);
+    emit(Saved());
+  }
+
+  deleteSave(Map item) {
+    savedItems.remove(item);
     emit(Saved());
   }
 }

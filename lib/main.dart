@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'modules/start_up/splash_view/splash_view.dart';
-
 void main() {
   Stripe.publishableKey = ApiKeys.publishableKey;
   runApp(const FastFood());

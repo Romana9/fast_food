@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../home_layout/home_layout.dart';
+import '../../map/map.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -17,7 +18,7 @@ class Welcome extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 48.w),
             child: Column(
               children: [
-                SizedBox(height: 15.h),
+                SizedBox(height: 25.h),
                 Align(
                   alignment: Alignment.centerRight,
                   child: InkWell(
@@ -65,10 +66,10 @@ class Welcome extends StatelessWidget {
                 SizedBox(height: 27.h),
                 ElevatedButton(
                     onPressed: () {
-                      // Navigator.pushReplacement(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => const Auth()));
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MapScreen()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
